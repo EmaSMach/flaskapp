@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Users - Addresses{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div>
+        <h1>Users</h1>
+    </div>
+
+<table class="table">
+    <thead>
+        <th>User</th>
+        <th>Address</th>
+    </thead>
+
+    {% if object_list %}
+{% for user in object_list %}
+
+    <tbody>
+    <td>{{ user }}</td>
+    <td>{{ user.address }}</td>
+    </tbody>
+
+{% endfor %}
+    {% endif %}
+</table>
+
+</div>
+{% endblock %}
